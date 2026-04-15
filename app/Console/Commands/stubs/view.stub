@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ $title }}</title>
+</head>
+<body>
+    <h1>Module Works!</h1>
+    <p>{{ $title }}</p>
+</body>
+</html>

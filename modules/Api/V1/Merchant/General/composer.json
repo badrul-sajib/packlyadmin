@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-general",
+    "description": "General",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Merchant API",
+    "sub_group_name": "General",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": true,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\General\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\General\\Providers\\GeneralServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,59 @@
+<?php
+
+namespace {{controllerNamespace}};
+
+use Illuminate\Http\Request;
+use {{serviceNamespace}}\{{modelName}}Service;
+use {{requestNamespace}}\Store{{modelName}}Request;
+use {{requestNamespace}}\Update{{modelName}}Request;
+use App\Http\Controllers\Controller;
+
+class {{controllerName}} extends Controller
+{
+    public function __construct(
+        protected {{modelName}}Service $service
+    ) {}
+
+    public function index()
+    {
+        $items = $this->service->paginate(15);
+        return view('{{viewPrefix}}::index', compact('items'));
+    }
+
+    public function create()
+    {
+        return view('{{viewPrefix}}::create');
+    }
+
+    public function store(Store{{modelName}}Request $request)
+    {
+        $this->service->create($request->validated());
+        return redirect()->route('{{routePrefix}}.index')
+                        ->withSuccess('{{modelName}} created successfully!');
+    }
+
+    public function show($id)
+    {
+        $item = $this->service->find($id);
+        return view('{{viewPrefix}}::show', compact('item'));
+    }
+
+    public function edit($id)
+    {
+        $item = $this->service->find($id);
+        return view('{{viewPrefix}}::edit', compact('item'));
+    }
+
+    public function update(Update{{modelName}}Request $request, $id)
+    {
+        $this->service->update($id, $request->validated());
+        return redirect()->route('{{routePrefix}}.index')
+                        ->withSuccess('{{modelName}} updated successfully!');
+    }
+
+    public function destroy($id)
+    {
+        $this->service->delete($id);
+        return back()->withSuccess('{{modelName}} deleted successfully!');
+    }
+}

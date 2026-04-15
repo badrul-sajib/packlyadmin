@@ -1,0 +1,23 @@
+{
+    "name": "modules/ecommerce-version",
+    "description": "Laravel module: Ecommerce/Version",
+    "type": "laravel-module",
+    "parent_folder": "Ecommerce",
+    "group_name": "Ecommerce API",
+    "sub_group_name": "General",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Ecommerce\\Version\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Ecommerce\\Version\\Providers\\VersionServiceProvider"
+            ]
+        }
+    }
+}

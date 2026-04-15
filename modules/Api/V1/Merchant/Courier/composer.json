@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-courier",
+    "description": "Courier",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Merchant API",
+    "sub_group_name": "General",
+    "load_module": true,
+    "hide_module": true,
+    "dependent_modules": [],
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Courier\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Courier\\Providers\\CourierServiceProvider"
+            ]
+        }
+    }
+}

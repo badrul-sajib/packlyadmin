@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-product-comment",
+    "description": "Product Comment",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "E-Shop Module",
+    "sub_group_name": "Marketing & Engagement",
+    "dependent_modules": ["modules/merchant-e-product"],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\ProductComment\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\ProductComment\\Providers\\ProductCommentServiceProvider"
+            ]
+        }
+    }
+}

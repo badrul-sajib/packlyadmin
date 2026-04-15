@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-category",
+    "description": "Category",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Products & Inventory Module",
+    "sub_group_name": "Products",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Category\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Category\\Providers\\CategoryServiceProvider"
+            ]
+        }
+    }
+}

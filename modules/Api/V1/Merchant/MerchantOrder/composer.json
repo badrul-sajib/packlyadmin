@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-merchant-order",
+    "description": "Order Management",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "E-Shop Module",
+    "sub_group_name": "Shop Management",
+    "dependent_modules": ["modules/merchant-product", "modules/merchant-e-product"],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\MerchantOrder\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\MerchantOrder\\Providers\\MerchantOrderServiceProvider"
+            ]
+        }
+    }
+}

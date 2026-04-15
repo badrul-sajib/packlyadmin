@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-chat",
+    "description": "Chat",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Merchant API",
+    "sub_group_name": "General",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": true,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Chat\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Chat\\Providers\\ChatServiceProvider"
+            ]
+        }
+    }
+}

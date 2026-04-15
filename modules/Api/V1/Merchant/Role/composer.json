@@ -1,0 +1,25 @@
+{
+    "name": "modules/merchant-role",
+    "description": "Role Permission",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Access Control",
+    "sub_group_name": "",
+    "dependent_modules": [
+        "modules/merchant-user"
+    ],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Role\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Role\\Providers\\RoleServiceProvider"
+            ]
+        }
+    }
+}

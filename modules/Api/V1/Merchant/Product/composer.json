@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-product",
+    "description": "Product",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Products & Inventory Module",
+    "sub_group_name": "Products",
+    "dependent_modules": ["modules/merchant-unit", "modules/merchant-category", "modules/merchant-brand", "modules/merchant-attribute"],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Product\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Product\\Providers\\ProductServiceProvider"
+            ]
+        }
+    }
+}

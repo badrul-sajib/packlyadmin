@@ -1,0 +1,15 @@
+<?php
+
+use Illuminate\Support\Facades\Route;
+use {{fullControllerNamespace}}\{{controller}};
+
+Route::prefix('{{prefix}}')
+     ->name('{{prefix}}.')->group(function () {
+    Route::get('/', [{{controller}}::class, 'index'])->name('index');
+    Route::get('/create', [{{controller}}::class, 'create'])->name('create');
+    Route::post('/', [{{controller}}::class, 'store'])->name('store');
+    Route::get('/{id}', [{{controller}}::class, 'show'])->name('show');
+    Route::get('/{id}/edit', [{{controller}}::class, 'edit'])->name('edit');
+    Route::put('/{id}', [{{controller}}::class, 'update'])->name('update');
+    Route::delete('/{id}', [{{controller}}::class, 'destroy'])->name('destroy');
+});

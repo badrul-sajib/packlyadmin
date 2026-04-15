@@ -1,0 +1,85 @@
+<?php
+
+namespace {{controllerNamespace}};
+
+use App\Services\ApiResponse;
+use {{serviceNamespace}}\{{modelName}}Service;
+use {{requestNamespace}}\Store{{modelName}}Request;
+use {{requestNamespace}}\Update{{modelName}}Request;
+use {{resourceNamespace}}\{{resourceName}};
+use Illuminate\Http\JsonResponse;
+use App\Http\Controllers\Controller;
+
+class {{controllerName}} extends Controller
+{
+    public function __construct(
+        protected {{modelName}}Service $service
+    ) {}
+
+    public function index(): JsonResponse
+    {
+        try {
+            $data = $this->service->paginate(15);
+            return ApiResponse::success(
+                '{{modelName}}s retrieved successfully',
+                {{resourceName}}::collection($data)
+            );
+        } catch (\Throwable $e) {
+            \Log::error($e->getMessage());
+            return ApiResponse::error('Something went wrong);
+        }
+    }
+
+    public function store(Store{{modelName}}Request $request): JsonResponse
+    {
+        try {
+            $item = $this->service->create($request->validated());
+            return ApiResponse::successMessageForCreate(
+                '{{modelName}} created',
+                new {{resourceName}}($item),
+                201
+            );
+        } catch (\Throwable $e) {
+            \Log::error($e->getMessage());
+            return ApiResponse::error('Something went wrong);
+        }
+    }
+
+    public function show(int $id): JsonResponse
+    {
+        try {
+            $item = $this->service->find($id);
+            return ApiResponse::success(
+                '{{modelName}} retrieved',
+                new {{resourceName}}($item)
+            );
+        } catch (\Throwable $e) {
+            return ApiResponse::error('{{modelName}} not found', 404);
+        }
+    }
+
+    public function update(Update{{modelName}}Request $request, int $id): JsonResponse
+    {
+        try {
+            $item = $this->service->update($id, $request->validated());
+            return ApiResponse::success(
+                '{{modelName}} updated',
+                new {{resourceName}}($item)
+            );
+        } catch (\Throwable $e) {
+            \Log::error($e->getMessage());
+            return ApiResponse::error('Something went wrong);
+        }
+    }
+
+    public function destroy(int $id): JsonResponse
+    {
+        try {
+            $this->service->delete($id);
+            return ApiResponse::success('{{modelName}} deleted successfully');
+        } catch (\Throwable $e) {
+            \Log::error($e->getMessage());
+            return ApiResponse::error('Something went wrong);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-purchase",
+    "description": "Purchase",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Purchase Module",
+    "sub_group_name": "",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Purchase\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Purchase\\Providers\\PurchaseServiceProvider"
+            ]
+        }
+    }
+}

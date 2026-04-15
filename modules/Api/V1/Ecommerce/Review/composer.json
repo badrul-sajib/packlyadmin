@@ -1,0 +1,23 @@
+{
+    "name": "modules/ecommerce-review",
+    "description": "Laravel module: Ecommerce/Review",
+    "type": "laravel-module",
+    "parent_folder": "Ecommerce",
+    "group_name": "Ecommerce API",
+    "sub_group_name": "Content",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Ecommerce\\Review\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Ecommerce\\Review\\Providers\\ReviewServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-customer",
+    "description": "Customer",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Sales & POS Module",
+    "sub_group_name": "",
+    "dependent_modules": ["modules/merchant-sale", "modules/merchant-product"],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Customer\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Customer\\Providers\\CustomerServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,75 @@
+<?php
+
+namespace {{namespace}}\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+use {{namespace}}\Repositories\{{moduleName}}Repository;
+use {{namespace}}\Repositories\Contracts\{{moduleName}}RepositoryInterface;
+use {{namespace}}\Services\{{moduleName}}Service;
+
+
+class {{providerClass}} extends ServiceProvider
+{
+    protected string $modulePath = __DIR__ . '/../';
+
+    public function register(): void
+    {
+        $this->app->bind(
+            {{moduleName}}RepositoryInterface::class,
+            {{moduleName}}Repository::class
+        );
+
+        $this->app->singleton(
+            {{moduleName}}Service::class,
+            fn ($app) => new {{moduleName}}Service(
+                $app->make({{moduleName}}RepositoryInterface::class)
+            )
+        );
+    }
+
+    public function boot(): void
+    {
+        $this->registerRoutes();
+        $this->registerViews();
+        $this->registerMigrations();
+        $this->registerConfig();
+    }
+
+    protected function registerRoutes(): void
+    {
+        $web = $this->modulePath . 'Routes/web.php';
+        $api = $this->modulePath . 'Routes/api.php';
+
+        if (file_exists($web)) {
+            $this->loadRoutesFrom($web);
+        }
+        if (file_exists($api)) {
+            $this->loadRoutesFrom($api);
+        }
+    }
+
+    protected function registerViews(): void
+    {
+        $path = $this->modulePath . 'Resources/views';
+        if (is_dir($path)) {
+            $this->loadViewsFrom($path, '{{viewNamespace}}');
+        }
+    }
+
+    protected function registerMigrations(): void
+    {
+        $path = $this->modulePath . 'Migrations';
+        if (is_dir($path)) {
+            $this->loadMigrationsFrom($path);
+        }
+    }
+
+    protected function registerConfig(): void
+    {
+        $path = $this->modulePath . 'Config/config.php';
+        if (file_exists($path)) {
+            $this->mergeConfigFrom($path, '{{configKey}}');
+        }
+    }
+}

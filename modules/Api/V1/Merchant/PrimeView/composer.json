@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-prime-view",
+    "description": "PrimeView",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Merchant API",
+    "sub_group_name": "General",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": true,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\PrimeView\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\PrimeView\\Providers\\PrimeViewServiceProvider"
+            ]
+        }
+    }
+}

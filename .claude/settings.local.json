@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"\\\\.php$\")",
+      "Bash(rm -f '/Users/imsajib/Downloads/Packly Admin/database/migrations/*.php')",
+      "Bash(cp '/Users/imsajib/Downloads/packly-ecommerce-admin-main/database/migrations/*.php' '/Users/imsajib/Downloads/Packly Admin/database/migrations/')",
+      "Bash(cp -R /Users/imsajib/Downloads/packly-ecommerce-admin-main/database/seeders/ '/Users/imsajib/Downloads/Packly Admin/database/seeders/')",
+      "Bash(cp -R /Users/imsajib/Downloads/packly-ecommerce-admin-main/database/factories/ '/Users/imsajib/Downloads/Packly Admin/database/factories/')",
+      "Bash(cp /Users/imsajib/Downloads/packly-ecommerce-admin-main/app/Helpers/Helper.php '/Users/imsajib/Downloads/Packly Admin/app/Helpers/Helper.php')",
+      "Bash(cp /Users/imsajib/Downloads/packly-ecommerce-admin-main/app/Helpers/ApiResponse.php '/Users/imsajib/Downloads/Packly Admin/app/Helpers/ApiResponse.php')",
+      "Bash([ -d \"$SRC/app/$dir\" ])",
+      "Bash(cp -R /Users/imsajib/Downloads/packly-ecommerce-admin-main/app/__TRACKED_VAR__/ '/Users/imsajib/Downloads/Packly Admin/app/__TRACKED_VAR__/')",
+      "Bash(cp /Users/imsajib/Downloads/packly-ecommerce-admin-main/routes/admin.php '/Users/imsajib/Downloads/Packly Admin/routes/admin.php')",
+      "Bash(cp -R /Users/imsajib/Downloads/packly-ecommerce-admin-main/routes/admin/ '/Users/imsajib/Downloads/Packly Admin/routes/admin/')",
+      "Bash([ -d \"$SRC/app/Modules\" ])",
+      "Bash(cp -R /Users/imsajib/Downloads/packly-ecommerce-admin-main/app/Modules/ '/Users/imsajib/Downloads/Packly Admin/app/Modules/')",
+      "Bash([ -d \"$SRC/resources/views/emails\" ])",
+      "Bash(cp -R /Users/imsajib/Downloads/packly-ecommerce-admin-main/resources/views/emails/ '/Users/imsajib/Downloads/Packly Admin/resources/views/emails/')",
+      "Bash([ -d \"$SRC/resources/views/backend/pages/auth\" ])",
+      "Bash(composer install:*)",
+      "Bash(composer update:*)",
+      "Bash(php artisan:*)",
+      "Bash(mysql -u root -e \"CREATE DATABASE IF NOT EXISTS packlyadmin2;\")",
+      "Bash(mysql -u root packlyadmin2 -e \"CREATE TABLE IF NOT EXISTS users LIKE packlyadmin.users;\")",
+      "Bash(mysql -u root packlyadmin -e \"SELECT COUNT\\(*\\) as total_tables FROM information_schema.tables WHERE table_schema = 'packlyadmin';\")"
+    ]
+  }
+}

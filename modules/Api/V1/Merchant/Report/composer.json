@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-report",
+    "description": "Financial Reports",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Finance & Accounting Module",
+    "sub_group_name": "",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Report\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Report\\Providers\\ReportServiceProvider"
+            ]
+        }
+    }
+}

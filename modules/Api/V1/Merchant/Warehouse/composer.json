@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-warehouse",
+    "description": "Warehouse Management",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "Products & Inventory Module",
+    "sub_group_name": "",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\Warehouse\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\Warehouse\\Providers\\WarehouseServiceProvider"
+            ]
+        }
+    }
+}

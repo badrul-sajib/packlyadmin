@@ -1,0 +1,23 @@
+{
+    "name": "modules/ecommerce-brand",
+    "description": "Laravel module: Ecommerce/Brand",
+    "type": "laravel-module",
+    "parent_folder": "Ecommerce",
+    "group_name": "Ecommerce API",
+    "sub_group_name": "Products",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Ecommerce\\Brand\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Ecommerce\\Brand\\Providers\\BrandServiceProvider"
+            ]
+        }
+    }
+}

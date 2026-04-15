@@ -1,0 +1,11 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Green parallelogram -->
+  <path d="M4 12L14 6L14 34L4 28Z" fill="#2BB5A0" rx="2"/>
+  <rect x="2" y="10" width="12" height="22" rx="3" transform="skewX(-8)" fill="#2BB5A0"/>
+  <!-- Dark arrow shape -->
+  <path d="M16 8L30 20L16 32V24L22 20L16 16V8Z" fill="#3B3F45"/>
+  <!-- Packly text -->
+  <text x="38" y="29" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.5">
+    <tspan fill="#3B3F45">Pack</tspan><tspan fill="#6B7280">ly</tspan>
+  </text>
+</svg>

@@ -1,0 +1,23 @@
+{
+    "name": "modules/merchant-category-request",
+    "description": "Category Request",
+    "type": "laravel-module",
+    "parent_folder": "Merchant",
+    "group_name": "E-Shop Module",
+    "sub_group_name": "Marketing & Engagement",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Merchant\\CategoryRequest\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Merchant\\CategoryRequest\\Providers\\CategoryRequestServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "modules/ecommerce-unit",
+    "description": "Laravel module: Ecommerce/Unit",
+    "type": "laravel-module",
+    "parent_folder": "Ecommerce",
+    "group_name": "Ecommerce API",
+    "sub_group_name": "",
+    "dependent_modules": [],
+    "load_module": true,
+    "hide_module": false,
+    "autoload": {
+        "psr-4": {
+            "Modules\\Api\\V1\\Ecommerce\\Unit\\": "."
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Api\\V1\\Ecommerce\\Unit\\Providers\\UnitServiceProvider"
+            ]
+        }
+    }
+}
