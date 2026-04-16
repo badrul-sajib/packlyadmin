@@ -136,7 +136,7 @@
             </h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mt-0.5">Here's what's happening with Packly today.</p>
           </div>
-        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4 mt-5">
           <div class="flex items-center rounded-lg border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-white/[0.02]">
             <span class="flex items-center justify-center w-10 h-10 shrink-0 text-gray-400 border-r border-gray-200 dark:border-gray-700">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5l-3.9 19.5m-2.1-19.5l-3.9 19.5"/></svg>
